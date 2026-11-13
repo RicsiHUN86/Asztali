@@ -1,0 +1,24 @@
+<Window x:Class="Filmek.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Filmek" Height="550" Width="800">
+    <Grid Margin="15">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.6*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Orientation="Vertical" Margin="30">
+            <Button Content="Filmek betöltése" Click="betoltes"/>
+            <Button Content="Hány film van?" Click="darab"/>
+            <Button Content="Leghosszabb film?" Click="leghosszabb"/>
+            <Button Content="Átlag értékelés" Click="atlag"/>
+            <Button Content="Csak sci-fi" Click="csakSciFi"/>
+            <Button Content="Csak címek" Click="csakCimek"/>
+            <Button Content="Rendezés cím szerint" Click="rendezes"/>
+            <ProgressBar x:Name="folyamat" Height="26" Minimum="0" Maximum="100"/>
+        </StackPanel>
+
+        <DataGrid x:Name="dataGrid" Grid.Column="1" SelectionChanged="kivalasztas"/>
+    </Grid>
+</Window>
