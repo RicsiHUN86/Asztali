@@ -1,0 +1,34 @@
+<Window x:Class="dolgozatok.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Dolgozatok" Height="430" Width="700">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <DataGrid x:Name="dataGrid" Grid.Row="0" IsReadOnly="True" Margin="5"/>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Center">
+                <Label Content="Név:" VerticalAlignment="Center"/>
+                <TextBox x:Name="Nev" Width="185" Height="30" VerticalContentAlignment="Center"/>
+                <Label Content="Életkor:" Margin="5" VerticalAlignment="Center"/>
+                <TextBox x:Name="Eletkor" Width="60" Height="30" VerticalContentAlignment="Center"/>
+                <Label Content="Pontszám:" Margin="5" VerticalAlignment="Center"/>
+                <TextBox x:Name="Pontszam" Width="60" Height="30" VerticalContentAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Orientation="Vertical" Margin="5">
+                <Button Content="Hozzáadás" Width="120" Height="35" Click="hozzaadas"/>
+                <Button Content="Mentés" Width="120" Height="35" Margin="5" Click="mentes"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
